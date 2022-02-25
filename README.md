@@ -1,8 +1,8 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a [Next.js](https://nextjs.org/) project based off the Redis Full Text Search tutorial from [fireship-io](https://github.com/fireship-io/redis-nextjs-fulltext-search).
 
 ## Getting Started
 
-First, run the development server:
+First, download and run the development server:
 
 ```bash
 npm run dev
@@ -12,23 +12,20 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+You can start creating entries by inputting information into the fields and search for that entry using the search input at the bottom.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Goal Of This Project
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+The purpose of this project is to get familiar with Next.js and using Redis as a primary database. 
 
-## Learn More
+## What I have learned
 
-To learn more about Next.js, take a look at the following resources:
+Next.js provides perfect structure for building web applications which makes the development process a lot smoother.
+I have yet to see the benefits of server side rendering but will pursue this in a future project.
+Working with Redis and the Redis Insight GUI also provided me with easier access to the database to confirm saved data. However, I see this as only a benefit for small applications and not for larger application that rely on scalability and the ability to see how data is related.
+For that reason I will develop an application that utilizes PostgreSQL for the database and Redis as a cache to support it.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+##Issues I ran into
+I ran into an issue loading the SWC binary but found a [fix here](https://stackoverflow.com/questions/69816589/next-failed-to-load-swc-binary). Unforunately I had to lose the benefit of the rust compiler but for this small project it doesn't matter.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+When I went to go check on my data using Redis Insight I noticed the data was saved as a Hash Data Structure which doesn't support nested objects like the desired JSON I had intended to use. The application still works, however I will have to do more research into the differences using a Hash and JSON.
