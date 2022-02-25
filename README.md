@@ -22,7 +22,8 @@ The purpose of this project is to get familiar with Next.js and using Redis as a
 
 Next.js provides perfect structure for building web applications which makes the development process a lot smoother.
 I have yet to see the benefits of server side rendering but will pursue this in a future project.
-Working with Redis and the Redis Insight GUI also provided me with easier access to the database to confirm saved data. However, I see this as only a benefit for small applications and not for larger application that rely on scalability and the ability to see how data is related.
+
+Working with Redis and the Redis Insight GUI also provided me with easier access to the database to confirm saved data. However, I see this as only a benefit for small applications and not for larger applications that rely on scalability and the ability to see how data is related.
 For that reason I will develop an application that utilizes PostgreSQL for the database and Redis as a cache to support it.
 
 ## Issues I ran into
